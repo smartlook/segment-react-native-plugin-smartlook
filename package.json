@@ -1,0 +1,77 @@
+{
+  "name": "@smartlook/segment-react-native-plugin-smartlook",
+  "version": "1.0.0",
+  "description": "Segment react-native destination plugin for Smartlook.",
+  "main": "lib/commonjs/index",
+  "scripts": {
+    "prepare": "bob build",
+    "typescript": "tsc --noEmit",
+    "clean": "rimraf lib node_modules",
+    "release": "semantic-release"
+  },
+  "keywords": [
+    "smartlook",
+    "analytics",
+    "segment",
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "package.json",
+    "!src/**/*.e2e.mock.js",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smartlook/segment-react-native-plugin-smartlook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smartlook/segment-react-native-plugin-smartlook/issues"
+  },
+  "author": "Smartlook",
+  "license": "MIT",
+  "peerDependencies": {
+    "@segment/analytics-react-native": "*"
+  },
+  "dependencies": {
+    "@segment/analytics-react-native": "^2.2.2",
+    "smartlook-react-native-wrapper": "^1.2.7"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "react-native-builder-bob": "^0.18.3",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.3",
+    "typescript": "^4.7.4"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
