@@ -1,5 +1,6 @@
-import Smartlook from 'smartlook-react-native-wrapper';
+import Smartlook from 'react-native-smartlook-analytics';
 
 export default () => {
-	Smartlook.resetSession(true);
+	Smartlook.instance.user.openNewSession();
+  Smartlook.instance.user.openNewUser();
 };
