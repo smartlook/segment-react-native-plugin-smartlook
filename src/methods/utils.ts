@@ -1,16 +1,16 @@
-interface Dictionary<T> {
-    [Key: string]: T;
-}
+import type { Properties } from "react-native-smartlook-analytics";
 
-function flatten(obj: any, prefix = '') {
+export function propertify(obj: any, prefix = '') {
 	return Object.keys(obj).reduce((acc, current) => {
 		const _key = `${prefix ? prefix + '_' : ''}${current}`;
 		const currentValue = obj[current];
-		if (Array.isArray(currentValue) || Object(currentValue) === currentValue) {
-			Object.assign(acc, flatten(currentValue, current));
+    
+		if (currentValue && (Array.isArray(currentValue) || Object(currentValue) === currentValue)) {
+			Object.assign(acc, propertify(currentValue, current));
 		} else {
-			acc[_key] = `${currentValue}`;
+      acc.putString(_key, currentValue);
 		}
+
 		return acc;
-	}, {} as Dictionary<string>);
+	}, {} as Properties);
 }
