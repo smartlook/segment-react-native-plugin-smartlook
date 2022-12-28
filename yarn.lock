@@ -4214,6 +4214,11 @@ react-native-builder-bob@^0.18.3:
   optionalDependencies:
     jetifier "^2.0.0"
 
+react-native-smartlook-analytics@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-smartlook-analytics/-/react-native-smartlook-analytics-2.1.0.tgz#e8f24824945df78ee73d4cf4ea5468d0780d9518"
+  integrity sha512-3jgvq3co/XlywhiVjX72CZSVgeIqKUbSrHN1KLX7n5ScONqQPoTFevnWlNanwuObToAAFMvpODmaCu/7tXXAfw==
+
 react-native-uuid@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-native-uuid/-/react-native-uuid-2.0.1.tgz#ed4e2dfb1683eddb66967eb5dca140dfe1abddb9"
